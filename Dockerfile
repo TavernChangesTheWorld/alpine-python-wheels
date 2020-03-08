@@ -69,9 +69,9 @@ RUN pip install -U pip && \
     pip wheel . && \
     pip install *.whl && \
     cd .. && \
-    git clone https://git.travitia.xyz/Adrian/fantasy-names && \
+    mkdir fantasy-names && \
     cd fantasy-names && \
-    pip wheel . && \
+    wget https://github.com/Gelbpunkt/alpine-python-wheels/raw/3.9/wheels/fantasy_names-1.0.0-py3-none-any.whl && \
     pip install *.whl && \
     cd .. && \
     git clone https://github.com/nir0s/distro && \
