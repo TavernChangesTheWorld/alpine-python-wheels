@@ -1,11 +1,11 @@
-FROM gelbpunkt/python:latest
+FROM tavernsws/python:latest
 
 WORKDIR /build
 
 RUN pip install -U pip && \
     apk add --no-cache --virtual .build-deps git gcc  musl-dev linux-headers make automake libtool m4 autoconf jq curl && \
-    git config --global user.name "Jens Reidel" && \
-    git config --global user.email "jens@troet.org" && \
+    git config --global user.name "Tavern North" && \
+    git config --global user.email "wontprovide@for.now" && \
     git clone https://github.com/cython/cython && \
     cd cython && \
     pip wheel . && \
